@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/niansong/Documents/Component-Measure/src/contour.cpp
+contour.hpp
+/home/niansong/Documents/Component-Measure/src/contour.hpp
+
+/home/niansong/Documents/Component-Measure/src/main.cpp
+iostream
+-
+contour.hpp
+/home/niansong/Documents/Component-Measure/src/contour.hpp
+opencv2/opencv.hpp
+-
+math.h
+-
+
+include/contour.hpp
+iostream
+-
+opencv2/opencv.hpp
+-
+vector
+-
+algorithm
+-
+

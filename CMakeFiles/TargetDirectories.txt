@@ -1,0 +1,3 @@
+/home/niansong/Documents/Component-Measure/CMakeFiles/rebuild_cache.dir
+/home/niansong/Documents/Component-Measure/CMakeFiles/measure.dir
+/home/niansong/Documents/Component-Measure/CMakeFiles/edit_cache.dir

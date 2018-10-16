@@ -9,6 +9,8 @@ find_package(OpenCV REQUIRED)
 add_executable(
 	measure
 	src/main.cpp
+	src/contour.cpp
+	include/contour.hpp
 )
 
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )
