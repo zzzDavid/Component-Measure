@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/niansong/Documents/Component-Measure/src/circle.cpp" "/home/niansong/Documents/Component-Measure/CMakeFiles/measure.dir/src/circle.cpp.o"
   "/home/niansong/Documents/Component-Measure/src/contour.cpp" "/home/niansong/Documents/Component-Measure/CMakeFiles/measure.dir/src/contour.cpp.o"
   "/home/niansong/Documents/Component-Measure/src/main.cpp" "/home/niansong/Documents/Component-Measure/CMakeFiles/measure.dir/src/main.cpp.o"
   )

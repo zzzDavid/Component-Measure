@@ -123,6 +123,33 @@ measure/fast:
 	$(MAKE) -f CMakeFiles/measure.dir/build.make CMakeFiles/measure.dir/build
 .PHONY : measure/fast
 
+src/circle.o: src/circle.cpp.o
+
+.PHONY : src/circle.o
+
+# target to build an object file
+src/circle.cpp.o:
+	$(MAKE) -f CMakeFiles/measure.dir/build.make CMakeFiles/measure.dir/src/circle.cpp.o
+.PHONY : src/circle.cpp.o
+
+src/circle.i: src/circle.cpp.i
+
+.PHONY : src/circle.i
+
+# target to preprocess a source file
+src/circle.cpp.i:
+	$(MAKE) -f CMakeFiles/measure.dir/build.make CMakeFiles/measure.dir/src/circle.cpp.i
+.PHONY : src/circle.cpp.i
+
+src/circle.s: src/circle.cpp.s
+
+.PHONY : src/circle.s
+
+# target to generate assembly for a file
+src/circle.cpp.s:
+	$(MAKE) -f CMakeFiles/measure.dir/build.make CMakeFiles/measure.dir/src/circle.cpp.s
+.PHONY : src/circle.cpp.s
+
 src/contour.o: src/contour.cpp.o
 
 .PHONY : src/contour.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... measure"
 	@echo "... edit_cache"
+	@echo "... src/circle.o"
+	@echo "... src/circle.i"
+	@echo "... src/circle.s"
 	@echo "... src/contour.o"
 	@echo "... src/contour.i"
 	@echo "... src/contour.s"

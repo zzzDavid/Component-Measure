@@ -10,7 +10,9 @@ add_executable(
 	measure
 	src/main.cpp
 	src/contour.cpp
+	src/circle.cpp
 	include/contour.hpp
+	include/circle.hpp
 )
 
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )

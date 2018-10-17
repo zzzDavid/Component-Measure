@@ -2,6 +2,7 @@
 #include"contour.hpp"
 #include <opencv2/opencv.hpp>
 #include <math.h>
+#include "circle.hpp"
 
 using namespace std;
 using namespace cv;
@@ -14,8 +15,8 @@ int main(int argc, char* argv[]){
     imshow("original image", image_org);
     waitKey(0);
 
-    vector<Point> c;
-    contour(image_org, c);
-
+    //vector<Point> c;
+    //contour(image_org, c);
+    mycircle(image_org);
     waitKey(0);
 }

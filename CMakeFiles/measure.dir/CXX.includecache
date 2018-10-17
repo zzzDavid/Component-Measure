@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/niansong/Documents/Component-Measure/src/circle.cpp
+circle.hpp
+/home/niansong/Documents/Component-Measure/src/circle.hpp
+
 /home/niansong/Documents/Component-Measure/src/contour.cpp
 contour.hpp
 /home/niansong/Documents/Component-Measure/src/contour.hpp
@@ -19,6 +23,24 @@ opencv2/opencv.hpp
 -
 math.h
 -
+circle.hpp
+/home/niansong/Documents/Component-Measure/src/circle.hpp
+
+include/circle.hpp
+iostream
+-
+opencv2/opencv.hpp
+-
+opencv2/highgui.hpp
+include/opencv2/highgui.hpp
+opencv2/imgproc.hpp
+include/opencv2/imgproc.hpp
+vector
+-
+algorithm
+-
+math.h
+-
 
 include/contour.hpp
 iostream
@@ -28,5 +50,7 @@ opencv2/opencv.hpp
 vector
 -
 algorithm
+-
+math.h
 -
 

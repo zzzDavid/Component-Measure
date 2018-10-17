@@ -23,11 +23,13 @@
 #include <opencv2/opencv.hpp> 
 #include <vector>
 #include <algorithm>
+#include <math.h>
 
 using namespace std;
 using namespace cv;
 
 void contour(Mat& src, vector<Point>& contour);
+bool isNear(const Point2f point, const vector<Point2f> array);
 
 
 #endif
