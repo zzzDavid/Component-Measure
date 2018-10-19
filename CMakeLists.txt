@@ -7,12 +7,12 @@ project(measure)
 find_package(OpenCV REQUIRED)
 
 add_executable(
-	measure
-	src/main.cpp
-)
+        measure
+        src/main.cpp
+        src/circles.cpp)
 
-INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )
-link_directories( ${CMAKE_BINARY_DIR}/bin)
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
+link_directories(${CMAKE_BINARY_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
-target_link_libraries( measure  ${OpenCV_LIBS} )
+target_link_libraries(measure ${OpenCV_LIBS})
