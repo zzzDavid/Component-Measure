@@ -1,69 +1,44 @@
-#include <opencv2/opencv.hpp>
-#include <iostream>
-#include <vector>
+#include "measure.h"
+#include "utils.h"
 
-cv::Mat read_and_prep(const char *filename)
+void circles(const cv::String &filename, std::vector<cv::Vec3f> coors)
 {
-  cv::Mat im_0, im_1, im_2, im;
+  cv::Mat im_0, im_1, im_med, im_otsu, im_corner;
 
-  im_0 = cv::imread(filename);
-  cv::resize(im_0, im_1, cv::Size(), 0.1, 0.1, cv::INTER_CUBIC);
-  im_2 = im_1(cv::Range(0, 800), cv::Range(0, 800));
-  cv::cvtColor(im_2, im, cv::COLOR_BGR2GRAY);
+  // Pre-processing
+  im_0 = cv::imread(filename, cv::IMREAD_GRAYSCALE);
+  cv::resize(im_0, im_1, cv::Size(), 0.14, 0.14, cv::INTER_CUBIC);
 
-  return im;
-}
+  // Median blur
+  cv::medianBlur(im_1, im_med, 5);
+//  show("median blur", im_med);
 
-int main()
-{
-  cv::Mat im = read_and_prep("../../image/800-beige/18-04-08-14-32-05.tif");
+  // Otsu threshold
+  cv::threshold(im_med, im_otsu, 0, 255, cv::THRESH_BINARY + cv::THRESH_OTSU);
+//  show("otsu", im_otsu);
 
-  // CANNY
-  cv::Mat im_canny;
-  cv::Canny(im, im_canny, 250, 500, 3);
+  cv::cornerHarris(im_otsu, im_corner, 2, 3, 0.04, cv::BORDER_DEFAULT);
+//  show("harris", im_corner);
 
-  cv::imshow("Canny", im_canny);
-
-  // HOUGH LINES
-  std::vector<cv::Vec2f> lines;
-  cv::HoughLines(im_canny, lines, 1, 0.1, 36, 0, 0);
-
-  cv::Mat im_2;
-  cv::cvtColor(im_canny, im_2, cv::COLOR_GRAY2BGR);
-
-  for (auto &line : lines) // draw lines
-  {
-    float rho = line[0], theta = line[1];
-    cv::Point pt1, pt2;
-    double a = cos(theta), b = sin(theta);
-    double x0 = a * rho, y0 = b * rho;
-    pt1.x = cvRound(x0 + 1000 * (-b));
-    pt1.y = cvRound(y0 + 1000 * (a));
-    pt2.x = cvRound(x0 - 1000 * (-b));
-    pt2.y = cvRound(y0 - 1000 * (a));
-    cv::line(im_2, pt1, pt2, cv::Scalar(0, 0, 255), 1, cv::LINE_AA);
-  }
-
-  cv::imshow("Hough Lines", im_2);
+  int lim[4] = {0, 0, 0, 0};
+  find_roi(im_corner, lim);
+  cv::Mat im_1_roi = im_1(cv::Range(lim[0], lim[1]), cv::Range(lim[2], lim[3]));
+  cv::Mat im_otsu_roi = im_otsu(cv::Range(lim[0], lim[1]), cv::Range(lim[2], lim[3]));
 
   // HOUGH CIRCLES
-  std::vector<cv::Vec3f> circles;
-  cv::HoughCircles(im, circles, cv::HOUGH_GRADIENT, 1, im.rows / 10, 400, 20, 10, 100);
+  int min_rad = std::min(im_otsu_roi.rows, im_otsu_roi.cols) / 20;
+  cv::HoughCircles(im_otsu_roi, coors, cv::HOUGH_GRADIENT, 1, 50, 200, 10, min_rad, min_rad + 5);
 
-  cv::Mat im_3;
-  cv::cvtColor(im_canny, im_3, cv::COLOR_GRAY2BGR);
-  for (auto &circle : circles) // draw circles
+  cv::Mat im_disp;
+  cv::cvtColor(im_otsu_roi, im_disp, cv::COLOR_GRAY2BGR);
+  for (auto &coor : coors) // draw circles
   {
-    cv::Point center = cv::Point(circle[0], circle[1]);
-
-    cv::circle(im_3, center, 1, cv::Scalar(0, 0, 255), 3, cv::LINE_AA); // circle center point
-    cv::circle(im_3, center, circle[2], cv::Scalar(0, 0, 255), 1, cv::LINE_AA); // circle outline
+    cv::Point center = cv::Point(coor[0], coor[1]);
+    cv::circle(im_disp, center, 1, cv::Scalar(0, 0, 255), 3, cv::LINE_AA); // circle center point
+    cv::circle(im_disp, center, coor[2], cv::Scalar(0, 0, 255), 1, cv::LINE_AA); // circle outline
   }
-
-  cv::imshow("Hough Circles", im_3);
+  cv::imshow("hough circles", im_disp);
 
   cv::waitKey(0);
   cv::destroyAllWindows();
-
-  return 0;
 }

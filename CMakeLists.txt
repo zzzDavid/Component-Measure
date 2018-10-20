@@ -9,7 +9,8 @@ find_package(OpenCV REQUIRED)
 add_executable(
         measure
         src/main.cpp
-        src/circles.cpp)
+        src/circles.cpp include/measure.h
+        include/utils.h src/utils.cpp)
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
 link_directories(${CMAKE_BINARY_DIR}/bin)
