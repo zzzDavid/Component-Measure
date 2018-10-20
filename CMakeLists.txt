@@ -9,6 +9,12 @@ find_package(OpenCV REQUIRED)
 add_executable(
 	measure
 	src/main.cpp
+	src/Measure_Origins.cpp
+	src/getExteriorContour.cpp
+	src/detectLines.cpp
+	include/Measure_Origins.hpp
+	include/detectLines.hpp
+	include/getExteriorContour.hpp
 )
 
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )
