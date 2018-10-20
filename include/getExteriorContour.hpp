@@ -1,10 +1,8 @@
-#ifndef CIRCLE_H
-#define CIRCLE_H
+#ifndef GET_EXTERIOR_CONTOUR_H
+#define GET_EXTERIOR_CONTOUR_H
 
 #include <iostream>
 #include <opencv2/opencv.hpp> 
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
 #include <vector>
 #include <algorithm>
 #include <math.h>
@@ -12,6 +10,7 @@
 using namespace std;
 using namespace cv;
 
-void mycircle(Mat& src);
+
+void getExteriorContour( Mat src, vector<Point>& contour);
 
 #endif

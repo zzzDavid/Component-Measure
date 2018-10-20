@@ -28,7 +28,7 @@
 using namespace std;
 using namespace cv;
 
-void contour(Mat& src, vector<Point>& contour);
+void Measure_Origins(Mat& src);
 bool isNear(const Point2f point, const vector<Point2f> array);
 
 
