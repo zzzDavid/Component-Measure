@@ -1,4 +1,4 @@
-# A Component Measuring Program Based on ![Emgu CV](emgu.com)
+# A Component Measuring Program Based on [Emgu CV](emgu.com)
 - Date: 2018-10-16
 - Version: 1.0.0
 - Abstract: Program measures shape parameters of component based on input image
@@ -11,7 +11,7 @@
 
 1. Acquire JetBrains student account with you GitHub student account.
 
-2. Download and install ![JetBrains Rider](https://www.jetbrains.com/rider/).
+2. Download and install [JetBrains Rider](https://www.jetbrains.com/rider/).
 
 3. Alternatively, use Visual Studio Community edition.
 
@@ -27,7 +27,7 @@ This repo contains 2 solutions.
 
 Solution for algorithms, in the form of methods of `class Measurement`. 
 
-![Emgu.CV NuGet package](https://www.nuget.org/packages/Emgu.CV/) is bundled in this solution. No need for additional download.
+[Emgu.CV NuGet package](https://www.nuget.org/packages/Emgu.CV/) is bundled in this solution. No need for additional download.
 
 Besure to write helper methods as private methods and follow naming conventions provided by Rider.
 
