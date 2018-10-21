@@ -8,3 +8,13 @@ C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\De
 C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.xml
 C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.dll
 C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.pdb
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.UnitTests.dll
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.UnitTests.pdb
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.dll
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.dll
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.pdb
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.pdb
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.xml
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.dll
+F:\Documents\GitHub\Component-Measure\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.pdb
