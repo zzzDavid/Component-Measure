@@ -1,0 +1,10 @@
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.UnitTests.dll
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.UnitTests.pdb
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.dll
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\Measurement.pdb
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.pdb
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.dll
+C:\Users\Songyi\RiderProjects\Measurement.UnitTests\Measurement.UnitTests\obj\Debug\Measurement.UnitTests.pdb
