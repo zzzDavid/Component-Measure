@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Songyi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Songyi\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Measurement.UnitTests.2145073331.00" t="ExcludeRecursive" />
-    <e p="F:\Documents\GitHub\Component-Measure\Measurement.UnitTests" t="IncludeFlat">
+    <e p="C:\Users\raven\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\raven\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Measurement.UnitTests.211658810.00" t="ExcludeRecursive" />
+    <e p="C:\Users\raven\Workspace\Component-Measure\Measurement.UnitTests" t="IncludeFlat">
       <e p="Measurement.UnitTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Measurement.UnitTests.csproj" t="IncludeRecursive" />
