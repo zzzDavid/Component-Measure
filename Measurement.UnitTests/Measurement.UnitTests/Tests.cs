@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Measurement.UnitTests
@@ -75,12 +77,30 @@ namespace Measurement.UnitTests
             var data = new double[3];
             var status = "";
             m1.RectangleData(ref data, ref status);
-            Console.WriteLine(string.Format("height = {0}, width = {1}, diagonal = {2}", data[0], data[1], data[2]));
+            Console.WriteLine("height = {0}, width = {1}, diagonal = {2}", data[0], data[1], data[2]);
             Console.WriteLine(status);
 
             m2.RectangleData(ref data, ref status);
             // Proper warning should be given when it is not a rectangle
             Console.WriteLine(status);
+        }
+
+        [Test]
+        public void HoleData_ReturnListOfDouble3XYR() // Function 3 in PDF
+        {
+            const string filename = "path/to/image";
+            var m = new Measurement(filename);
+            
+            List<double[]> data = new List<double[]>();
+            string status = "";
+
+            m.HoleData(ref data, ref status);
+            
+            for (int i = 0; i < data.Count; i++)
+            {
+                Console.WriteLine("Hole #{0}: X={1}, Y={2}, R={3}", i, data[0], data[1], data[2]);
+                Console.WriteLine(status);
+            }
         }
     }
 }
