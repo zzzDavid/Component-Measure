@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Songyi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Songyi\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Measurement.-1110156651.00" t="ExcludeRecursive" />
-    <e p="F:\Documents\GitHub\Component-Measure\Measurement" t="IncludeFlat">
+    <e p="C:\Users\raven\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\raven\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Measurement.2092864412.00" t="ExcludeRecursive" />
+    <e p="C:\Users\raven\Workspace\Component-Measure\Measurement" t="IncludeFlat">
       <e p="Measurement" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="License-LGPL.txt" t="Include" />

@@ -1,34 +1,49 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.Eventing.Reader;
+using System.Net.Mime;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.ImgHash;
+using Emgu.CV.Structure;
+using Emgu.CV.Util;
 
 namespace Measurement
 {
     public class Measurement
     {
-        private readonly ArrayList _dummyContourLines; // dummy private member with setter and getter
+        private Mat _image; // private member _image, accessed or mutated by property Image
 
-        public Measurement() // constructor
+        public Mat Image // property member to access/mutate _image
         {
-            _dummyContourLines = new ArrayList();
+            get { return _image; }
+            set
+            {
+                if (value.Dims != 2)
+                    throw new EventLogException("Image mutator only takes a 2-D greyscale Mat.");
+                if (value.Cols < 100 || value.Rows < 100)
+                    throw new EventLogException("At least 1 dim of the image is too small (< 100px).");
+                _image = value;
+            }
+        }
+
+        public void Load(string filename, double scaling=1.0)
+        {
+            Mat im = CvInvoke.Imread(filename, ImreadModes.Grayscale);
+            Mat imResized = new Mat();
+            CvInvoke.Resize(im, imResized, new System.Drawing.Size(0, 0), scaling, scaling, Inter.Cubic);
+
+            _image = imResized;
         }
         
-        public void DummyContourLines(int dummyImage, string[] dummyLines) // dummy method
+        public Measurement() // constructor
         {
-            
-            foreach (var line in dummyLines)
-            {
-                _dummyContourLines.Add(line.Trim());
-            }
-
-            Console.WriteLine("Here is DummyContourLines, " + dummyImage);
+            _image = new Mat();
         }
 
-        public void DummyPrintContourLines()
+        public Measurement(string filename) // constructor
         {
-            foreach (var line in _dummyContourLines)
-            {
-                Console.WriteLine(line);
-            }
+            this.Load(filename);
         }
     }
 }
