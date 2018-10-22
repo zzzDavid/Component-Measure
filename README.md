@@ -9,7 +9,7 @@
 
 ### IDE
 
-1. Acquire JetBrains student account with you GitHub student account.
+1. Acquire JetBrains student account with your GitHub student account.
 
 2. Download and install [JetBrains Rider](https://www.jetbrains.com/rider/).
 
